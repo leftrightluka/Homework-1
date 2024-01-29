@@ -1,0 +1,40 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter a letter grade (A, B, C, D, F):");
+        char grade = Console.ReadLine().ToUpper()[0];
+
+        int gpaPoints = GetGPAPoints(grade);
+
+        if (gpaPoints != -1)
+        {
+            Console.WriteLine("The GPA points are: " + gpaPoints);
+        }
+        else
+        {
+            Console.WriteLine("Wrong Letter Grade womp womp!");
+        }
+    }
+
+    static int GetGPAPoints(char grade)
+    {
+        switch (grade)
+        {
+            case 'A':
+                return 4;
+            case 'B':
+                return 3;
+            case 'C':
+                return 2;
+            case 'D':
+                return 1;
+            case 'F':
+                return 0;
+            default:
+                return -1; // Indicates wrong letter grade
+        }
+    }
+}
