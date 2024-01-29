@@ -1,0 +1,25 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Please enter the first number:");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Please enter the second number:");
+        int num2 = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Please enter the third number:");
+        int num3 = Convert.ToInt32(Console.ReadLine());
+
+        int smallest = FindSmallest(num1, num2, num3);
+
+        Console.WriteLine("The smallest number is: " + smallest);
+    }
+
+    static int FindSmallest(int a, int b, int c)
+    {
+        return Math.Min(Math.Min(a, b), c);
+    }
+}
